@@ -49,7 +49,7 @@ class Article(models.Model):
     objects = ArticleManager()
 
     def get_absolute_url(self):
-       return reverse("article-detail", kwargs={"slug": self.slug})
+       return reverse("articles:detail", kwargs={"slug": self.slug})
 
 
     def save(self, *args, **kwargs):
