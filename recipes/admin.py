@@ -28,6 +28,7 @@ User = get_user_model()
 # stacked UI 
 class RecipeIngredientInline(admin.StackedInline):
     model=RecipeIngredient
+    readonly_fields = ['quantity_as_float', 'as_mks', 'as_imperial']
     # fields = ['name', 'quantity', 'unit', 'directions']
     extra = 0
 

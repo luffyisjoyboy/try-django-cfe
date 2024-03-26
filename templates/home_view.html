@@ -5,8 +5,8 @@
 <h1>{{ object.title }} (id: {{ id }})!</h1>
 <p>{{ object.content }}!</p>
 
-<a href='{% url "article-create" %}'>Create Article</a>
-<a href='{% url "article-detail" slug="efvrgbttujun" %}'>Hello world article</a>
+<a href='{% url "articles:create" %}'>Create Article</a>
+<a href='{% url "articles:detail" slug="efvrgbttujun" %}'>Hello world article</a>
 <ul>
     {% for x in object_list %}
         {% if x.title %}
